@@ -51,7 +51,7 @@ router.get("/", async(req, res) => {
         console.log("Worker processing queue : ", job.data);
 
         // Simulate a delay of 3 seconds before processing the next job
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
     }, { connection });
 
     addJobs();
