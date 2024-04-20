@@ -50,6 +50,9 @@ app.get("/testjwt", (req, res) => {
   res.json({ token });
 });
 
+const API = require("./routers/api.js")
+app.use("/api", API)
+
 //LISTENER
 app.listen(PORT, () => {
   console.log(`Your are listening on port ${PORT}`);
